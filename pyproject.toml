@@ -2,7 +2,8 @@
 requires = [
     "setuptools>=45",
     "setuptools_scm[toml]",
-    "setuptools_scm_git_archive",
+    # Removing "setuptools_scm_git_archive" becauses it causes pkg_resources error with setuptools 82+
+    # "setuptools_scm_git_archive",
 ]
 build-backend = "setuptools.build_meta"
 
