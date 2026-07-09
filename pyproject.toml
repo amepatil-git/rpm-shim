@@ -1,11 +1,13 @@
 [build-system]
 requires = [
     "setuptools>=45",
-    "setuptools_scm[toml]",
+    # Removing "setuptools_scm" because during Konflux CI test version was not fetched from git tag, so instead using static versioning in setup.cfg
+    # "setuptools_scm[toml]",
     # Removing "setuptools_scm_git_archive" becauses it causes pkg_resources error with setuptools 82+
     # "setuptools_scm_git_archive",
 ]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools_scm]
-version_scheme = "post-release"
+# Removed: [tool.setuptools_scm] - using static versioning in setup.cfg
+# [tool.setuptools_scm]
+# version_scheme = "post-release"
